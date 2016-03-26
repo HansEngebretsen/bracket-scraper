@@ -1,5 +1,6 @@
 ## Basic Node scraper
 Uses node.js and phantomjs to scrape ESPN's Bracket Tournament website, cache and reformat the results to display them within a custom UI.Depends on having a mongo DB to hook up to for caching.
+Check out the live [demo](https://den-madness.herokuapp.com/) on Heroku.
 
 #### Getting Started
 Assuming you've got node installed, you'll need to run `npm install` and `grunt` to startup the node server, and generate the appropriate files.
