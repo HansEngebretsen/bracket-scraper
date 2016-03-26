@@ -1,0 +1,47 @@
+[
+    {
+        "bracketName": "HailVictors",
+        "rank": "1",
+        "_id": "HailVictors",
+        "timestamp": "2016-03-21T02:27:54.617Z",
+        "person": "De Renzo",
+        "image": "derenzo",
+        "percent": "79.6"
+    },
+    {
+        "bracketName": "1st Place",
+        "rank": "2",
+        "_id": "1st Place",
+        "timestamp": "2016-03-21T02:27:54.618Z",
+        "person": "Hans",
+        "image": "hans",
+        "percent": 51
+    },
+    {
+        "bracketName": "beuler",
+        "rank": "3",
+        "_id": "beuler",
+        "timestamp": "2016-03-21T02:27:54.619Z",
+        "person": "Euler",
+        "image": "euler",
+        "percent": 41
+    },
+    {
+        "bracketName": "HoosierDaddy",
+        "rank": "4",
+        "_id": "HoosierDaddy",
+        "timestamp": "2016-03-21T02:27:54.620Z",
+        "person": "Thrasher",
+        "image": "thrasher",
+        "percent": 31
+    },
+    {
+        "bracketName": "paul.werkema 1",
+        "rank": "5",
+        "_id": "paul.werkema 1",
+        "timestamp": "2016-03-21T02:27:54.620Z",
+        "person": "Werkema",
+        "image": "werkema",
+        "percent": 24
+    }
+]

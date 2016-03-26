@@ -1,0 +1,50 @@
+body {
+  transition:600ms all;
+  opacity:0;
+  .inview {
+    max-width:70%;
+    transition: 2s all;
+  }
+  .opaque {
+    max-width:0;
+    transition:none;
+  }
+  .path {
+    opacity:0;
+    transition: 200ms .25s opacity;
+    stroke-dashoffset: 400;
+    transition: 1s .5s ease-in-out;
+  }
+  .graph-number {
+    opacity:0;
+    transition:800ms .5s all;
+  }
+  .winner-graph .image-wrap {
+    opacity:0;
+    transform:translateX(-30px);
+    transition:400ms .5s all;
+  }
+  .meta-wrap {
+    opacity:0;
+    transform:translateY(30px);
+    transition:400ms .25s transform ease-out, 800ms .25s opacity;
+  }
+  &.loaded {
+    opacity:1;
+    .meta-wrap {
+      opacity:1;
+      transform:translateY(0px);
+    }
+    .winner-graph .image-wrap {
+      transform:translateY(0px);
+      opacity:1;
+    }
+    .graph-number {
+      opacity:1;
+    }
+    .path {
+      opacity:1;
+      stroke-dashoffset:100;
+    }
+  }
+}

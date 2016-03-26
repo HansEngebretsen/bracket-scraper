@@ -1,0 +1,325 @@
+$green: #41bd29;
+$dark-green: #2c8720;
+$darker-green: #236619;
+$slate: #1e1d23;
+$blue: #117bb7;
+$red: #DA1F27;
+
+@import 'breakpoints';
+@import 'loaded';
+* {
+  box-sizing:border-box;
+}
+.clearfix {
+  &:after {
+     content: "";
+     display: table;
+     clear: both;
+   }
+}
+body {
+  background-color:$dark-green;
+  font-family: 'Roboto Slab', serif;
+  padding:0;
+  overflow-x:hidden;
+  margin:0;
+}
+
+// Utilities
+.image-wrap {
+  opacity:.75;
+  width: 75px;
+  height: 75px;
+  position:relative;
+  overflow:hidden;
+  position:absolute;
+  left:0;
+  top:0;
+  img {
+    max-width:100%;
+  }
+}
+
+// Nav
+nav {
+  height: 90px;
+  position:absolute;
+  text-align:left;
+  padding-left: 20px;
+  padding-top:20px;
+  width:100%;
+  height:100%;
+  overflow-x:hidden;
+  .shamrock-wrap {
+    width: 40px;
+    display:inline-block;
+
+    position:relative;
+    vertical-align:middle;
+
+    svg {
+      fill:$green;
+      width:100%;
+    }
+  }
+  h2 {
+    margin:0;
+    vertical-align:middle;
+    margin-right: 10px;
+    display:inline-block;
+    padding-top:0;
+    white-space:no-wrap;
+    color:white;
+    margin-left:10px;
+    font-size:10.25em;
+    opacity:.1;
+    letter-spacing:.2em;
+    font-family:helevetica, 'helvetica-nue', arial,sans-serif;
+    position:absolute;
+    left:0;
+    top:0;
+    padding-top:0px;
+    text-transform:uppercase;
+    color:$darker-green;
+    font-weight:bold;
+    -webkit-font-smoothing:antialiased;
+    @include breakpoint(tablet){
+      font-size: 5em;
+    }
+  }
+}
+
+// Hero
+.hero-container {
+  width: 1200px;
+  max-width:100%;
+  margin:0 auto;
+  margin-top: 12vh;
+  overflow:hidden;
+  margin-bottom:15vh;
+  position:relative;
+}
+.hero-section {
+  // background-color:$slate;
+  width:100%;
+  margin:0 auto;
+  text-align: center;
+}
+section.losers {
+  overflow-x:hidden;
+}
+.hero-label {
+  text-transform:uppercase;
+  letter-spacing:.15em;
+  vertical-align:middle;
+  display:block;
+  margin-right: 25px;
+  padding-top: 30px;
+  color:white;
+  text-align:right;
+  font-size:.74em;
+  line-height:1;
+  &.losers {
+    line-height:1;
+    padding-top:20px;
+    color:white;
+    text-align:right;
+    margin-right: 20px;
+    display:block;
+    float:none;
+  }
+}
+.winner-graph {
+  position:relative;
+  display:inline-block;
+  width: 30%;
+  margin-left: 40px;
+  margin-right:40px;
+  vertical-align:middle;
+  .image-wrap {
+    display:inline-block;
+    left:10%;
+    top:1%;
+    border-radius:100%;
+    opacity:1;
+    @include breakpoint(phone){
+      display:none;
+    }
+  }
+  @include breakpoint(phone){
+    width:50%;
+    margin:0;
+    margin-top:40px;
+  }
+  svg {
+    width:100%;
+  }
+}
+.graph-number {
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translateX(-50%) translateY(-50%);
+  margin:0;
+  padding:0;
+  font-size:4em;
+  font-weight:100;
+  color:white;
+  sup {
+    font-size: .5em;
+    vertical-align:middle;
+  }
+}
+.meta-wrap {
+  display:inline-block;
+  vertical-align:middle;
+  text-align:right;
+  text-align:left;
+}
+.owner-meta {
+  font-size: 6em;
+  line-height:1;
+  color:white;
+  @include breakpoint(phone){
+    text-align:center;
+    font-size:5em;
+  }
+}
+
+.bracket-meta {
+  font-size:2em;
+  color: lighten($slate, 20%);
+  color: lighten($dark-green, 20%);
+  float:right;
+  @include breakpoint(phone){
+    text-align:center;
+    float:none;
+  }
+}
+
+
+
+.losers-container {
+  position:relative;
+  @include breakpoint(tablet){
+    width:150%;
+    max-width:150%;
+  }
+}
+
+.stripe {
+  background-color: darken($green, 27%);
+  width:90%;
+  &:nth-last-of-type(3){
+    background-color: darken($green, 22%);
+  }
+  &:nth-last-of-type(2){
+
+       background-color:darken($green, 20%);
+  }
+  &:nth-last-of-type(1){
+    background-color:darken($green, 10%);
+  }
+  .tiny {
+    position:absolute;
+    right:-20px;
+    top:50%;
+    color:$green;
+    transform:translateY(-50%) translateX(100%);
+  }
+  white-space:nowrap;
+  margin-top:0;
+  margin-bottom:0;
+  height: 75px;
+  padding-top:1em;
+  text-align:left;
+  padding-left: 95px;
+  font-size:1.5em;
+  color:darken($green,10%);
+  padding-bottom:1em;
+  font-weight:800;
+  border-top-right-radius:50px;
+  border-bottom-right-radius:50px;
+  margin-top:50px;
+  margin-bottom:50px;
+  position:relative;
+  &.fourth-place {
+    background-color:darken($green, 20%);
+     span {
+      color:darken($green, 10%);
+    }
+  }
+   &.fifth-place {
+    background-color:darken($green, 10%);
+     span {
+      color:darken($green, 10%);
+    }
+  }
+  &.third-place {
+    background-color: darken($green, 27%);
+    span {
+      color:darken($green, 17%);
+    }
+  }
+  .percent {
+    border-radius: 50%;
+    display:block;
+    color:$green;
+    position:absolute;
+    height: 50px;
+    width: 50px;
+    top:50%;
+    right:10px;
+    transform:translateY(-50%);
+    line-height:2.25;
+    text-indent:.5em;
+    font-weight:800;
+    background-color:rgba($slate, .3);
+    sup {
+      font-size:.5em;
+      vertical-align:middle;
+    }
+  }
+
+}
+
+.owner-wrap {
+  line-height:1;
+  color:white;
+  position:relative;
+  .image-wrap {
+    border-radius:100%;
+    opacity:1;
+    height:100px;
+    position:relative;
+    width:100px;
+
+    display:inline-block;
+    vertical-align:middle;
+  }
+}
+
+.trophy-container {
+  max-width: 15px;
+  display:inline-block;
+  vertical-align:middle;
+  margin-right:10px;
+  margin-left: 10px;
+  svg {
+    width:100%;
+    height: 100%;
+  }
+}
+.path {
+  stroke-dasharray: 400;
+  stroke-dashoffset:100;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset:400;
+  }
+  to {
+    stroke-dashoffset: 100;
+  }
+}

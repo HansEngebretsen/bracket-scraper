@@ -1,0 +1,44 @@
+extends layout
+
+block content
+  nav
+    span.shamrock-wrap
+      include ../public/img/shamrock.svg
+    h2 Man's Den Madness
+  section.hero-section.clearfix
+    div.hero-label current
+      div.trophy-container
+          include ../public/img/trophy.svg
+      span.text Champ ∨
+    div.hero-container.clearfix
+      div.meta-wrap
+        div.meta
+          div.owner-meta #{data[0].person}
+          div.bracket-meta #{data[0].bracketName}
+      div.winner-graph
+        span.image-wrap
+         img(src="../img/#{data[0].image}.jpg")
+        h3.graph-number #{data[0].percent}
+          sup %
+        include ../public/img/circle.svg
+  section.losers
+    div.hero-label.losers Top Losers ∨
+    div.losers-container
+      each item, index in data
+        if (index != 0)
+          if (item.percent < 21 )
+            div(class="stripe inview tiny" style="width: #{item.percent}%")
+             span.person.tiny #{item.person}
+             span.image-wrap
+                img(src="../img/#{item.image}.jpg")
+             span.percent #{item.percent}
+                sup %
+           else
+            div(class="stripe inview" style="width: #{item.percent}%")
+              span.person #{item.person}
+              span.image-wrap
+                 img(src="../img/#{item.image}.jpg")
+              span.percent #{item.percent}
+                sup %
+
+
